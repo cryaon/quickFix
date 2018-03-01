@@ -1,0 +1,36 @@
+{
+  "pages":[
+    
+    "pages/home/index",
+    "pages/start/start",
+    "pages/devices/index",
+    "pages/my/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"white",
+    "navigationBarTextStyle": "black",
+    "navigationBarTitleText": "信息中心报修系统",
+    "navigationBarBackgroundColor": "#FFFFFF",
+    "backgroundColor": "#F2f2f2",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "color": "#dddddd",
+    "selectedColor": "#3cc51f",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [{
+      "pagePath": "pages/home/index",
+      "iconPath": "image/fix_normal.png",
+      "selectedIconPath": "image/fix_pressed.png",
+      "text": "在线报修"
+    },{
+      "pagePath": "pages/my/index",
+      "iconPath": "image/account_normal.png",
+      "selectedIconPath": "image/account_pressed.png",
+      "text": "个人中心"
+    }]
+  },
+  "debug": true
+}
