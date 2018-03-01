@@ -1,0 +1,93 @@
+<!--index.wxml-->
+<view class='content'>
+  <image class='background' mode='aspectFill' src='{{bgUrl}}'>
+
+  </image>
+    <view class='header'>
+    <view style='margin-top:20rpx;margin-buttom:20rpx;'>
+      <image  class="userinfo-logo" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+    </view>
+    <view class="userinfo">
+        <text selectable='false' class="userinfo-nickname">{{userInfo.nickName}}</text>
+        <view wx:if="{{!userMobile}}" bindtap="getPhoneNumber">
+          <text selectable='false' class="userinfo-phone">{{bindPhone}}</text>
+        </view>
+        <view wx:if="{{userMobile}}" class="my-item" style="border:none;padding-right:150rpx;width:auto;">
+          {{phone}}{{userMobile}}
+        </view>
+    </view>
+  </view>
+  <view class="section-container">
+    <view class="section-item">
+      <image class="record-image" src="/image/record.png"></image>
+      
+      <view class="record-text">
+        <text >{{record}}</text>
+      </view>
+      <image class='right' src='https://cdn.it120.cc/images/weappshop/arrow-right.png'></image>
+    </view>
+    <view class="line-css"></view>
+    <view class="section-item">
+      <image class="settings-image" src="/image/settings.png"></image>
+      <view  class="settings-text">
+        <text>{{queryRecord}}</text>
+      </view>
+      <image class='right' src='https://cdn.it120.cc/images/weappshop/arrow-right.png'></image>
+    </view>
+
+    <view class="line-css"></view>
+    <view class="section-item" bindtap="toDevices">
+      <image class="settings-image" src="/image/settings.png"></image>
+      <view  class="settings-text">
+        <text>{{devices}}</text>
+      </view>
+      <image class='right' src='https://cdn.it120.cc/images/weappshop/arrow-right.png'></image>
+    </view>
+  </view>
+  <view class="section-settings">
+    <image class="settings-image" src="/image/settings.png"></image>
+    <view  class="settings-text">
+      <text>{{settings}}</text>
+    </view>
+    <image class='right' src='https://cdn.it120.cc/images/weappshop/arrow-right.png'></image>
+  </view>
+
+<!--自定义选择器 -->
+  <view class="userdata" bindtap='toggleBottomPopup'>
+    <view class="userdata-name">领维</view>
+    <view class="userdata-symbol"></view>
+      <text class="userdata-input">{{goodsInfoIndexName}}</text>
+      <image class='img-picker' src='{{goodsInfo[goodsInfoIndex].image}}'></image>
+    </view>
+  
+
+<!-- 遮罩层 -->
+
+ <view class="popup-example--bottom zan-popup zan-popup--bottom {{ showBottomPopup ? 'zan-popup--show' : ''}}">
+    <view class="zan-popup__mask" catchtap="toggleBottomPopup"></view>
+    <view class="zan-popup__container">
+    <view class="dialogtip" style='border-bottom: 1rpx solid #f1f1f1;'>
+      <text class="zan-font-16 zan-font-bold">请您选择{{phone}}</text>
+    </view>
+      <scroll-view scroll-y style="height: 146px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-top="{{scrollTop}}" scroll-with-animation="true">
+      <radio-group bindchange="radioChangeNeck">
+        <view wx:for="{{goodsInfo}}" wx:key="*this">
+        <view class="radio-group" data-name="{{index}}" bindtap='radioChangeNeckBind'>
+          <view class='radio-rad'>
+          <radio value="{{item.radioValue}}" checked='{{index == goodsInfoIndex?true:false}}'/>
+          </view>
+          <view class='radio-title'>
+            <text>{{item.title}}</text>
+          </view>
+          </view>
+            <view class='radioLine'></view>
+          </view>
+        </radio-group>
+      </scroll-view>
+      <view class="dialogtip" catchtap="toggleBottomPopup" style='border-top: 1rpx solid #f1f1f1;'>
+       <text class="zan-font-16 zan-font-bold">取消</text>
+      </view>
+    </view>
+  </view>
+
+</view>

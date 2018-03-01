@@ -1,0 +1,30 @@
+<!--index.wxml-->
+<view class="container">
+  <view  bindtap="bindViewTap" class="userinfo">
+    <image class="scanner-img" src="/image/qr_code.png"></image>
+  </view>
+  <view>
+    <text class="scanner-text">扫一扫</text>
+  </view>
+  <block wx:if="{{success}}">
+    <view class="usermotto">
+      <text>查询结果：</text>
+      <text style="margin-top:20px;font-size:16px;">设备名称:{{fix.device}}</text>
+      <text style="margin-top:10px;font-size:16px;">所在教学楼:{{fix.t_building}}</text>
+      <text style="margin-top:10px;font-size:16px;">所在教室: {{fix.classroom}}</text>
+      <text style="margin-top:10px;font-size:16px;">故障原因: {{reason}}</text>
+      <text style="margin-top:10px;font-size:16px;">报修时间:{{fix.r_time}}</text>
+      <text style="margin-top:10px;font-size:16px;">报修人: {{fix.r_user}}</text>
+    </view>
+  </block>
+  <block wx:else>
+    <view class="usermotto">
+      <text>点击图标，一键报修</text>
+    </view>
+    <view class="qr-code" bindtap="bindViewTap">
+          <view>
+              <image class="icon-camera" src="/image/camera.png"></image>
+          </view>
+    </view>
+  </block>
+</view>

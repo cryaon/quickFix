@@ -1,0 +1,263 @@
+@import "/style/weui.wxss";
+
+.context{
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+  background-color: #FFFFFF;
+}
+/*滑动图片*/
+.swiper-section{
+  width: 100%;
+  height: 300rpx;
+  background-color: #C7C7C7;
+}
+.slide-image{
+  width: 100%;
+}
+
+.header{
+  width: 100%;
+  background-color: #FFFFFF;
+  height: 80rpx;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: #FFFFFF;
+  width: 90%; 
+   
+}
+
+
+
+
+
+/*表单内容美化*/
+.context .input_section{
+  display: flex;
+  flex-direction: row;
+  align-items:stretch;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  text-align: justify;
+}
+.context .date_section{
+  display: flex;
+  flex-direction: row;
+  font-size: 18px;
+  align-items:stretch;
+  text-align: justify;
+  margin-top: 36rpx;
+  margin-bottom: 30rpx;
+}
+.context .textarea_section{
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+}
+
+/*输入框前提示文字样式*/
+.section_title{
+  justify-content: space-between;
+  font-size: 18px;
+  width: 200rpx;
+
+}
+.date_title{
+  justify-content: space-between;
+  font-size: 18px;
+  width: 300rpx;
+}
+
+/*输入框样式*/
+.form_input{
+  width: 73%;
+  font-size: 14px;
+  border-bottom: 2px solid lightgray;
+}
+
+/*日期输入框样式*/
+.date_input{
+  margin-left: -102rpx;
+  width: 73%;
+  font-size: 14px;
+  border-bottom: 2px solid lightgray;
+}
+
+
+/*文本区样式*/
+.textarea{
+  width: 97%;
+  background-color: #C7C7C7;
+  padding: 12rpx ;
+  border-radius: 2%;
+}
+.textarea_placeholder{
+   font-size: 30rpx;
+}
+.textarea_tips{
+  width: 100%;
+  font-size: 12px;
+  display: flex;
+  text-align:justify;
+  justify-content: flex-end;
+}
+
+/*提交按钮*/
+.submit_button{
+  color: #FFFFFF;
+  margin-bottom: 30rpx;
+  background-color: #09bb07;
+}
+.container .tips {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color:#C7C7C7;
+  line-height: 40px;
+  margin-bottom: 24rpx;
+  border-radius: 10rpx;
+}
+
+.container .tips .qr-code-image {
+  width: 60rpx;
+  height: 60rpx;
+  margin-left: 10px;
+}
+.container .tips .qr-code-tips {
+  margin-left: 10px;
+  font-size: 32rpx;
+}
+
+view.text {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 10px 10px 10px 12px;
+    font-size: 15px;
+    color: #656565;
+}
+
+view.text:before {
+    position: absolute;
+    display: block;
+    content: ' ';
+    left: -5px;
+    width: 2px;
+    height: 100%;
+    background-color: #09bb07;
+}
+
+.line_flag {
+    width: 3px;
+    height: 18px;
+    display: inline-block;
+    background-color: #09bb07;
+}
+
+view.text text {
+    margin-left: 10px;
+    line-height: 18px;
+}
+
+
+
+/*模态框样式*/
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+
+.modal-dialog {
+  width: 540rpx;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 9999;
+  background: #f9f9f9;
+  margin: -180rpx 105rpx;
+  border-radius: 36rpx;
+}
+
+.modal-title {
+  padding-top: 50rpx;
+  font-size: 36rpx;
+  color: #030303;
+  text-align: center;
+}
+
+.modal-content {
+  padding: 20rpx 32rpx;
+}
+
+.modal-input {
+  display: flex;
+  background: #fff;
+  border: 2rpx solid #ddd;
+  border-radius: 4rpx;
+  font-size: 28rpx;
+}
+
+
+.input {
+  width: 100%;
+  height: 82rpx;
+  font-size: 28rpx;
+  line-height: 28rpx;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  color: #333;
+}
+
+input-holder {
+  color: #666;
+  font-size: 28rpx;
+}
+.btn-input {
+  width: 100%;
+  color: #666;
+  text-align: center;
+}
+.modal-driver{
+  background-color: #dedede;
+  width: 100%;
+  height: 1px;
+  margin: 12rpx 0 20rpx 0;
+}
+.btn-sc {
+  width: 100%;
+  color: #666;
+  text-align: center;
+}
+/*
+.modal-footer {
+  display: flex;
+  flex-direction: row;
+  height: 86rpx;
+  border-top: 1px solid #dedede;
+  font-size: 34rpx;
+  line-height: 86rpx;
+}
+.btn-cancel {
+  width: 50%;
+  color: #666;
+  text-align: center;
+  border-right: 1px solid #dedede;
+}
+
+.btn-confirm {
+  width: 50%;
+  color: #ec5300;
+  text-align: center;
+}
+*/

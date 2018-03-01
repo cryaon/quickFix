@@ -1,0 +1,36 @@
+.container {
+  background-color:  #F2f2f2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.scanner-img {
+   width: 160rpx;
+   height: 160rpx;
+   margin-top: 80px;
+}
+.scanner-text {
+  list-style: none;
+  text-align: center;
+  color: #aaa;
+}
+.qr-code { 
+position: fixed; 
+bottom: 125px; 
+right: 5px; 
+background: #FFFFFF;
+border-radius: 50%;
+overflow: hidden; 
+z-index: 500; 
+}
+.icon-camera {
+  width: 35px;
+  height: 35px;
+}
+.usermotto {
+  background-color:  #F2f2f2;
+  margin-top: 100px;  
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}

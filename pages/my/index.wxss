@@ -1,0 +1,287 @@
+/**index.wxss**/
+.content{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #F2f2f2;
+}
+.background{
+  height: 280rpx;
+  width: 100%;
+  background-color: #1296db;
+}
+.header {
+  background-color: #FFFFFF;
+  height: 180rpx;
+  width: 90%;
+  margin-top:-75rpx;
+  padding:10rpx;
+  box-shadow:0rpx 2rpx 3rpx #aaaaaa;
+  border-radius:15rpx;
+  /*border:1rpx solid #BFBFBF;*/
+}
+.userinfo-logo{
+  width: 128rpx;
+  height: 128rpx;
+  margin: 10rpx;
+  border-radius: 50%;
+  box-shadow:0rpx 0rpx 3rpx #aaaaaa;
+ /* border:1rpx solid #BFBFBF;*/
+  float: left;
+}
+.userinfo-nickname {
+  margin-top: 16rpx;
+  padding-left: 20rpx;
+  padding-bottom: 2rpx;
+  font-size: 32rpx;
+  align-items: center;
+}
+.userinfo-phone{
+  color: 	#A9A9A9;
+  font-size: 22rpx;
+  padding-left: 20rpx;
+  align-items: center;
+}
+.section-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 40rpx;
+  padding:10rpx;
+  width: 90%;
+  background-color: #FFFFFF;
+  box-shadow:0rpx 2rpx 3rpx #aaaaaa;
+  border-radius:15rpx;
+}
+.section-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: #FFFFFF;
+  height: 100rpx;
+  
+}
+.right{
+  width: 20rpx;
+  height: 30rpx;
+}
+.record-text{
+  width: 80%;
+  padding-left: 20rpx;
+  font-size: 40rpx;
+}
+.record-image{
+  width: 60rpx;
+  height: 60rpx;
+  margin-top: 10rpx;
+  margin-left: 15rpx;
+}
+.line-css {
+  height: 1rpx;
+  width: 87.5%;
+  background-color: #C0C0C0;
+  margin-left: 95rpx;
+}
+.userinfo {
+  display: flex;
+  flex-direction: column;
+}
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.section-settings {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 40rpx;
+  padding:10rpx;
+  width: 90%;
+  background-color: #FFFFFF;
+  height: 100rpx;
+  line-height: 80rpx;
+  box-shadow:0rpx 2rpx 3rpx #aaaaaa;
+  border-radius:15rpx;
+  
+  
+}
+.settings-text{
+  width: 80%;
+  padding-left: 20rpx;
+  font-size: 40rpx;
+}
+.settings-image{
+  width: 60rpx;
+  height: 60rpx;
+  margin-left: 15rpx;
+}
+
+
+
+.userdata {
+
+/*下部分四个输入框*/
+
+margin: 10rpx
+0rpx 
+0rpx 0rpx;
+
+border: 1rpx
+solid #6c6c6c;
+
+width: 90%;
+
+display: flex;
+
+flex-direction: 
+row;
+
+border-radius: 
+10rpx;
+
+align-items: 
+center;
+
+background-color: 
+#fff
+
+}
+
+.userdata-name {
+
+width: 110rpx;
+
+padding: 20rpx
+0rpx 
+20rpx 20rpx;
+
+}
+
+.userdata-symbol:after {
+
+/*第一个箭头*/
+
+content: "";
+
+display: inline-block;
+
+width: 40rpx;
+
+height: 40rpx;
+
+margin: 15rpx
+0rpx 
+10rpx 0rpx;
+
+border-left: 
+1rpx solid
+#6c6c6c;
+
+}
+
+.userdata-input {
+
+/*后面三个箭头*/
+
+width: 380rpx;
+
+}
+
+.img-picker {
+
+width: 80rpx;
+
+height: 80rpx;
+
+}
+
+.goods-detail{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.goods-detail .mask { 
+  /* 遮罩层 */
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999999;
+  background: rgba(0,0, 0, 0.7);
+}
+
+.goodsdetail {
+  position: fixed;
+  bottom: 3%;
+  width: 90%;
+  left: 5%;
+  margin-top: -50%;
+  background: #fff;
+  z-index: 99999999999999;
+  overflow: hidden;
+  border-radius: 15rpx;
+}
+.dialogtip {
+  /* 顶部提示信息 */
+  height: 100rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.tipview {
+font-size: 36rpx;
+color: #e60012;
+font-weight: 600;
+}
+.radio-group {
+  /* 遮罩层单选按钮 */
+  margin: 0rpx 2% 0rpx 2%;
+  display: flex;
+}
+.radio-rad {
+  width: 60rpx;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+}
+.radio-pic {
+  width: 50rpx;
+  height: 50rpx;
+}
+.radio-title {
+  display: flex;
+  width: 500rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+}
+.radio-title text {
+  margin-left: 20rpx;
+  color: #000;
+  font-size: 30rpx;
+}
+.radioLine {
+  display: block;
+  width: 100%;
+  border-bottom: 1rpx solid #f1f1f1;
+}
+/*隐藏滚动条*/
+::-webkit-scrollbar{
+  width: 0rpx;
+  height: 0rpx;
+  color: transparent;
+}
+
+
+.zan-popup__container{
+   width: 96%;
+   margin-bottom: 3%;
+   margin-left: -48%;
+   border-radius: 15rpx;
+}

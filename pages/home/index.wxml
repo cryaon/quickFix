@@ -1,0 +1,117 @@
+<import src="/dist/field/index.wxml" />
+<!--index.wxml-->
+<view class='context'>
+  <swiper class='swiper-section' indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:key="*this" wx:for="{{imgUrls}}">
+      <swiper-item>
+        <image src="{{item}}" class="slide-image" mode='aspectFill'/>
+      </swiper-item>
+    </block>
+  </swiper>
+  
+  <view class='header'>
+    <view class="text">
+        <view class="line_flag"></view>
+        <text>发现设备故障</text>
+    </view>
+  </view>
+<view class="container">
+  
+    <view class="tips" bindtap='showAction'>
+      <image  class="qr-code-image" src="/image/qrcode.png" background-size="cover"></image>
+        <text class="qr-code-tips">扫描二维码或手动输入设备信息</text>
+    </view>
+    <!-- Field 基础用法 -->
+  <view class="zan-panel-title">基础用法</view>
+  <view class="zan-panel">
+   <template is="zan-field" data="{{ title: '报修人', type: 'input', placeholder: '请输入您的名字', value }}"></template>
+   <template is="zan-field" data="{{ title: '报修人', type: 'input', placeholder: '请输入您的名字', value }}"></template>
+   <template is="zan-field" data="{{ title: '报修人', type: 'input', placeholder: '请输入您的名字', value }}"></template>
+   <template is="zan-field" data="{{ title: '故障原因', type: 'textarea', placeholder: '请输入您的名字', value }}">
+    <view class='textarea_tips weui-textarea-counter'>还可输入{{limitReasonLen}}字</view>
+   </template>
+   
+  </view>
+
+  <view class="zan-btns">
+    <button
+      class="zan-btn zan-btn--primary"
+      bindtap="clearInput">清除输入</button>
+  </view>
+
+
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class="input_section" wx:if="{{showFormInput}}">
+          <view class="section_title">设备名称：</view>
+          <input name="input" class="form_input" confirm-type='next' value='{{fix.device}}'/>
+      </view>
+      <view class="input_section" wx:if="{{showFormInput}}">
+          <view class="section_title">教学楼：</view>
+          <input name="input" class="form_input"  confirm-type='next' value='{{fix.building}}'/>
+      </view>
+      <view class="input_section" wx:if="{{showFormInput}}">
+          <view class="section_title" >教室：</view>
+          <input name="input" type='number' class="form_input" confirm-type='next' value='{{fix.classroom}}'/>
+      </view>
+
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_select">
+                <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                    <view class="weui-label">教学楼</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <picker bindchange="buildingPickerChange" value="{{buildingArr}}" range="{{buildingArr}}">
+                        <view class="weui-select">{{buildingArr[buildingIndex]}}</view>
+                    </picker>
+                </view>
+            </view>
+            <view class="weui-cell weui-cell_select">
+                <view class="weui-cell__hd weui-cell__hd_in-select-after">
+                    <view class="weui-label">所在教室</view>
+                </view>
+                <view class="weui-cell__bd">
+                    <picker bindchange="classroomPickerChange" value="{{classroomIndex}}" range="{{classroomObjArr}}" range-key="{{'name'}}">
+                        <view class="weui-select weui-select_in-select-after">{{classroomObjArr[classroomIndex].name}}</view>
+                    </picker>
+                </view>
+            </view>
+        </view>
+       <view class="weui-cell weui-cell_input">
+          <view class="weui-cell__hd">
+              <view class="weui-label">报修日期</view>
+          </view>
+          <view class="weui-cell__bd">
+              <picker mode="date" value="{{date}}" start="2015-09-01" end="2999-09-01" bindchange="bindDateChange">
+                  <view class="weui-input">{{fixTime}}</view>
+              </picker>
+          </view>
+      </view>
+
+      <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">
+                    <textarea class="weui-textarea" placeholder="故障原因" placeholder-class="textarea_placeholder" style="height: 3.3em" bindinput='countWords'/>
+                    <view class='textarea_tips weui-textarea-counter'>还可输入{{limitReasonLen}}字</view>
+                </view>
+            </view>
+        </view>
+      <view class="btn-area">
+        <button formType="submit" class='submit_button'>提交</button>
+      </view>
+    </form>
+  </view>
+
+    <view class="modal-mask" catchtouchmove="preventTouchMove" wx:if="{{showActionModal}}"></view>
+      <view class="modal-dialog" wx:if="{{showActionModal}}">
+        <view class="modal-content">
+          <view class="btn-input" bindtap="sc_code">扫描二维码</view>
+          <view class='modal-driver'></view>
+          <view class="btn-sc" bindtap="inputData">手动输入设备信息</view>
+        </view>
+
+
+  </view>
+</view>
+
+
